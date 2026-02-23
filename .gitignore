@@ -1,0 +1,80 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.VC.opendb
+*.vscode/
+
+# Build results
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+*.dll
+*.exe
+*.app
+*.pdb
+*.ilk
+*.log
+*.tlog
+
+# Rider / JetBrains IDEs
+.idea/
+*.iml
+
+# NuGet packages
+*.nupkg
+packages/
+.nuget/
+*.snupkg
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Visual Studio Code
+.vscode/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Mac
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.old
+*.orig
+
+# Others
+*.userprefs
+*.scc
+*.cache
+*.pfx
+*.publishsettings
+*.vsix
+*.psess
+*.vsp
+*.vspx
+*.vsmdi
+*.testsettings
+*.ncb
+*.sdf
+*.opensdf
+*.cachefile
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+*.rptproj.user
