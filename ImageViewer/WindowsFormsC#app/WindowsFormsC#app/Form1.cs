@@ -14,8 +14,11 @@ namespace WindowsFormsC_app
 {
     public partial class Form1 : Form
     {
+        //necessary path manipulation to load from solution director not from debug directory
+        private static string solutionRoot = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..");
         // making some default photo loader when there is no images
-        private static string emptyiconpath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "tech", "empty.jpg");
+        private static string emptyiconpath = Path.Combine(solutionRoot, "tech", "empty.jpg");
+        private static string realimagespath = Path.Combine(solutionRoot, "Photos");
         // timer for slide show function
         Timer forslideshowtimer = new Timer();
         string runDirectory = AppDomain.CurrentDomain.BaseDirectory;
@@ -43,7 +46,7 @@ namespace WindowsFormsC_app
 
             InitializeComponent();
             configurator();
-            LOADER_OF_IMAGES_O(runDirectory);
+            LOADER_OF_IMAGES_O(realimagespath);
             LOAD_DIRS();
            
             
@@ -161,7 +164,7 @@ namespace WindowsFormsC_app
             int maxW = 300;
             try
             {
-                string filepath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "tech", "startup.ini");
+                string filepath = Path.Combine(solutionRoot, "tech", "startup.ini");
                
                 using (StreamReader sr = new StreamReader(filepath))
                 {
